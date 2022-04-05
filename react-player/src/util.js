@@ -18,7 +18,7 @@ function chillHop() {
       audio: ".sounds/itsgoingtogetbetter.wav",
       color: ["#fff", "#fff"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "dreams",
@@ -27,7 +27,7 @@ function chillHop() {
       audio: ".sounds/dreams.wav",
       color: ["#fff", "#fff"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "i've played too much fortnite this summer",
@@ -36,7 +36,7 @@ function chillHop() {
       audio: ".sounds/iveplayedtoomuchfortnitethissummer.wav",
       color: ["#fff", "#fff"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "sunday morning",
@@ -45,7 +45,7 @@ function chillHop() {
       audio: ".sounds/sundaymorning.wav",
       color: ["#fff", "#fff"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "will they return?",
@@ -54,7 +54,7 @@ function chillHop() {
       audio: ".sounds/willtheyreturn.wav",
       color: ["#fff", "#fff"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "the summer is gone",
@@ -63,7 +63,7 @@ function chillHop() {
       audio: ".sounds/thesummerisgone.wav",
       color: ["#fff", "#fff"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
   ];
 }
