@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { playAudio } from "../util";
 import {
   faPlay,
   faAngleLeft,
@@ -19,11 +18,9 @@ const Player = ({
   setCurrentSong,
   setSongs,
 }) => {
-  // useEffect
-  useEffect(() => {
-    // add active state
+  const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
-      if (song.id === currentSong.id) {
+      if (song.id === nextPrev.id) {
         return {
           ...song,
           active: true,
@@ -36,7 +33,7 @@ const Player = ({
       }
     });
     setSongs(newSongs);
-  }, [currentSong]);
+  };
   // Event handlers
   const playSongHandler = () => {
     // if the song is playing
@@ -65,25 +62,28 @@ const Player = ({
     // updating setSongInfo state on the property currentTime when input onchange is being activated
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
-  const skipTrackHandler = (direction) => {
+  const skipTrackHandler = async (direction) => {
     // getting the current index
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     if (direction === "skip-forward") {
       // incrementing by one on current index, also adding modulus operator so it starts from beginning when it's on the last song of array
-      setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+      await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
     }
     if (direction === "skip-back") {
       // if currentindex -1 equals songs.length -1
       if ((currentIndex - 1) % songs.length === -1) {
         // gives the last index in array
-        setCurrentSong(songs[songs.length - 1]);
-        playAudio(isPlaying, audioRef);
+        await setCurrentSong(songs[songs.length - 1]);
+        activeLibraryHandler(songs[songs.length - 1]);
+        if (isPlaying) audioRef.current.play();
         return;
       }
       // decreasing index by one
-      setCurrentSong(songs[(currentIndex - 1) % songs.length]);
+      await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
+      activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
     }
-    playAudio(isPlaying, audioRef);
+    if (isPlaying) audioRef.current.play();
   };
   // add styles to input
   const trackAnim = {
