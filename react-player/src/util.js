@@ -15,7 +15,7 @@ function chillHop() {
     {
       name: "time is flying away pretty fast",
       cover:
-        "https://i1.sndcdn.com/artworks-IvCpK5h0uu3KsuCk-q9wKJg-t500x500.jpgg",
+        "https://i1.sndcdn.com/artworks-IvCpK5h0uu3KsuCk-q9wKJg-t500x500.jpg",
       artist: "thedaysbefore",
       audio:
         "https://cf-media.sndcdn.com/S6UzJ73dV54g.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vUzZVeko3M2RWNTRnLjEyOC5tcDMqIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjQ5MTU0ODA1fX19XX0_&Signature=B4RqSnUl5QDGUYD~V5-yGAcrjo9hIFJLsgDyXwIY4XZ3wMYQ1t3m24WXQmpSUkDZUaT0h8CG6R7BRDTjryH5P7Cs11B0ys-gFmi6oacTKDh3kMjEbXOI7tII-cTPAnSRsaCfvX2uKIoRste6H63t~kOMdFNEZ43VXM1ORyQIVp2DsrCqzbcnt4hmaW2QZGPWlmcudQnPxqsp6cUcjTP4YzTZQnfVlUCVVLcNGRlhUhL7uyzE13cdTNolwZjcSOqqol5IAd0qNWrgn~gbHhAwXaD20jMO46NTi09dxlFCbkaZ0yrP3j0CqAmKtlPStfI13el2fjT5SWUoxbYW2OomzA__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
